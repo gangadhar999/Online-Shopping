@@ -5,7 +5,6 @@
 
 		<div class="col-md-3">
 			<%@ include file="./shared/sidebar.jsp"%>
-
 		</div>
 
 		<!-- To dispaly the actual Products -->
@@ -30,8 +29,6 @@
 						<li class="active">${category.name}</li>
 						</o1>
 					</c:if>
-
-
 				</div>
 			</div>
 		</div>

@@ -18,8 +18,8 @@
             </li>
             <li id="listProducts" class="nav-item" >
               <a class="nav-link" href="${contextRoot}/show/all/products">View Products</a>
-            </li>
-            
+              
+            </li>            
           </ul>
         </div>
       </div>

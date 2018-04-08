@@ -80,8 +80,7 @@ public class PageController {
 		mv.addObject("categories", categoryDAO.list());	
 		
 		//passing the single category object
-		mv.addObject("category", category);	
-		
+		mv.addObject("category", category);		
 		
 		mv.addObject("userClickCatgoryProducts",true);		
 		return mv;
