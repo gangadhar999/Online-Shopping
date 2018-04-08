@@ -3,9 +3,12 @@ package net.kzn.ShoppingBackend.daoimpl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import net.kzn.ShoppingBackend.dao.CategoryDAO;
 import net.kzn.ShoppingBackend.dto.Category;
 
+@Repository("categoryDAO")
 public class CategoryDAOImpl implements CategoryDAO {
 
 	private static List<Category> categories=new ArrayList<>();
@@ -35,17 +38,26 @@ public class CategoryDAOImpl implements CategoryDAO {
 		category.setDescription("This is description for Laptop");
 		category.setImageURL("CAT_3.png");
 		categories.add(category);
-
-
-
-
-
 	}
 
 	@Override
 	public List<Category>  list() {
 
 		return categories;
+	}
+
+	@Override
+	public Category get(int id) {
+
+		//enchanced for loop
+
+		for(Category category:categories){
+
+			if(category.getId()==id)
+
+				return category;
+		}
+		return null;
 	}
 
 }
