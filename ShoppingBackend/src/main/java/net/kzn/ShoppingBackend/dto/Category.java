@@ -1,5 +1,11 @@
 package net.kzn.ShoppingBackend.dto;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Category {
 	
 	/*
@@ -7,11 +13,14 @@ public class Category {
 	 * 
 	 */
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String name;
 	private String description;
-	private String imageURL;
-	private boolean active =true;
+	private String image_URL;
+	private boolean is_active =true;
+	
 	public int getId() {
 		return id;
 	}
@@ -30,17 +39,25 @@ public class Category {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getImageURL() {
-		return imageURL;
+	
+	
+	public boolean isIs_active() {
+		return is_active;
 	}
-	public void setImageURL(String imageURL) {
-		this.imageURL = imageURL;
+	public void setIs_active(boolean is_active) {
+		this.is_active = is_active;
 	}
-	public boolean isActive() {
-		return active;
+	
+	public String getImage_URL() {
+		return image_URL;
 	}
-	public void setActive(boolean active) {
-		this.active = active;
+	public void setImage_URL(String image_URL) {
+		this.image_URL = image_URL;
 	}
-
+	@Override
+	public String toString() {
+		return "Category [id=" + id + ", name=" + name + ", description=" + description + ", image_URL=" + image_URL
+				+ ", is_active=" + is_active + "]";
+	}
+	
 }

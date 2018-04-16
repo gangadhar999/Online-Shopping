@@ -12,23 +12,72 @@
 			<!--  Added breadcrumb component -->
 			<div class="row">
 
-				<div class="col-lg-12">
+				<div class="row">
 
-					<c:if test="${userClickAllProducts==true}">
-						<o1 class="breadcrumb">
-						<li><a href="${contextRoot}/home">Home</a></li>
-						<li class="active">All Products</li>
-						</o1>
-					</c:if>
+					<div class="col-xs-12">
 
-					<c:if test="${userClickCatgoryProducts==true}">
-						<o1 class="breadcrumb">
+						<table id="productListTable"
+							class="table table-striped table-borded">
 
-						<li><a href="${contextRoot}/home">Home</a></li>
-						<li class="active">Category</li>
-						<li class="active">${category.name}</li>
-						</o1>
-					</c:if>
+							<thead>
+								<tr>
+
+									<th> </th>
+									<th>Name</th>
+									<th>Brand</th>
+									<th>Price</th>
+									<th>Qty.Avaliable</th>
+									<th> </th>
+								</tr>
+
+							</thead>
+
+							<tfoot>
+								<tr>
+
+									<th> </th>
+									<th>Name</th>
+									<th>Brand</th>
+									<th>Price</th>
+									<th>Qty.Avaliable</th>
+									<th> </th>
+								</tr>
+
+							</tfoot>
+
+						</table>
+
+					</div>
 				</div>
 			</div>
+
+
+			<div class="col-lg-12">
+				<c:if test="${userClickAllProducts==true}">
+
+					<script>
+						window.categoryId = '';
+					</script>
+
+
+					<o1 class="breadcrumb">
+					<li><a href="${contextRoot}/home">Home</a></li>
+					<li class="active">All Products</li>
+					</o1>
+				</c:if>
+
+				<c:if test="${userClickCatgoryProducts==true}">
+
+					<script>
+						window.categoryId = '${category.id}';
+					</script>
+					<o1 class="breadcrumb">
+
+					<li><a href="${contextRoot}/home">Home</a></li>
+					<li class="active">Category</li>
+					<li class="active">${category.name}</li>
+					</o1>
+				</c:if>
+			</div>
 		</div>
+	</div>

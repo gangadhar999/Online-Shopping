@@ -13,8 +13,8 @@
    http://www.springframework.org/schema/mvc/spring-mvc.xsd
   
    ">
-	<context:component-scan base-package="net.kzn.onlineShopping.controller" />
-	<context:component-scan base-package="net.kzn.ShoppingBackend.daoimpl" />
+	<context:component-scan base-package="net.kzn.onlineShopping" />
+	<context:component-scan base-package="net.kzn.ShoppingBackend" />
 	
 
 		<bean id="viewResolver"

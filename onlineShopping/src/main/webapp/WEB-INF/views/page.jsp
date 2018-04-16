@@ -22,13 +22,19 @@
     
     <script type="text/javascript">
     window.menu='${title}';    
+    
+    window.contextRoot='${contextRoot}'
     </script>
     
     <!-- Bootstrap core CSS -->
     <link href="${css}/bootstrap.min.css" rel="stylesheet">
     
      <!-- Bootstrap United Theme CSS -->
-    <link href="${css}/bootstrap-united-theme.css" rel="stylesheet">   
+    <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">   
+    
+     <!-- Bootstrap DataTables  CSS -->
+    <link href="${css}/dataTables.bootstrap.css" rel="stylesheet">   
+    
 
     <!-- Custom styles for this template -->
     <link href="${css}/myapp.css" rel="stylesheet">
@@ -66,6 +72,12 @@
 	</c:if>	
 	</div>
 	
+	<!--Load Single Product Page  -->
+   <c:if test="${userClickShowProduct== true}">
+   <%@ include file="singleProduct.jsp" %>
+	</c:if>	
+	</div>
+	
 	
    <!-- Footer comes here -->
    <%@include file="./shared/footer.jsp" %>
@@ -73,6 +85,12 @@
     <!-- Bootstrap core JavaScript -->
     <script src="${js}/jquery.js"></script>
     <script src="${js}/bootstrap.min.js"></script>
+    
+    <!--DataTable Plugin -->
+    <script src="${js}/jquery.dataTables.js"></script>
+   
+    <!--DataTable BootStarp -->
+    <script src="${js}/dataTables.bootstrap.js"></script>   
     
     <!-- Self coded JavaScript  -->
     <script src="${js}/myapp.js"></script>   
